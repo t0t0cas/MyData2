@@ -15,12 +15,64 @@
         <!-- the 'TextView' is a 'label' -->
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:fontFamily="@font/almendra_bold"
-            android:textSize="30dp"
+            android:text="António Ramalho Fialho"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:text="António Ramalho Fialho" />
+            android:textSize="30dp" />
+
+        <!-- ask for user's nickname-->
+        <TextView
+            android:id="@+id/nickname_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+
+            android:text="@string/what_is_your_nickname" />
+
+        <EditText
+            android:id="@+id/nicknameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text=""
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/nickname_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/done"/>
+
+        <TextView
+            android:id="@+id/showNickname_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:text="" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <!-- present the user's cv -->
+            <TextView
+                android:id="@+id/usersCV_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:lineSpacingMultiplier="1.2"
+                android:padding="10dp"
+                android:text="@string/user_s_cv"
+                />
+        </ScrollView>
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
